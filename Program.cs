@@ -48,13 +48,12 @@ namespace AulaPOOCelular
                     switch (opcoesCelular)
                     {
                         case 1:
-                            Console.WriteLine(celular1.FazerLigacao());
-                            MostrarLigacao();
+                            celular1.FazerLigacao();
 
                             break;
                         case 2:
-                            Console.WriteLine(celular1.EnviarMensagem());
-                            MostrarMensagens();
+                            celular1.EnviarMensagem();
+                            
                             break;
                         case 3:
                             Console.WriteLine($"O modelo de seu celular é um {celular1.modelo} , sua cor é {celular1.cor}, com uma tela de {celular1.tamanho} polegadas!");
@@ -76,169 +75,9 @@ namespace AulaPOOCelular
             } while (celular1.ligado);
         }
 
-        static void MostrarLigacao()
-        {
-            selecaoContato = int.Parse(Console.ReadLine());
-            if (selecaoContato == 1)
+            static void MostrarDesligando()
             {
                 Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |        Ordilei:        |
-                    |    (11) 98989-2984     |
-                    |                        |
-                    |                        |
-                    |       Chamando...      |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-            }
-            else if (selecaoContato == 2)
-            {
-                Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |     Fernanda SENAI:    |
-                    |    (11) 95869-7845     |
-                    |                        |
-                    |                        |
-                    |       Chamando...      |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-            }
-            else if (selecaoContato == 3)
-            {
-                Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |       Sara Gois:       |
-                    |    (11) 94397-3783     |
-                    |                        |
-                    |                        |
-                    |       Chamando...      |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-            }
-        }
-
-        static void MostrarMensagens()
-        {
-            selecaoContato = int.Parse(Console.ReadLine());
-            if (selecaoContato == 1)
-            {
-                Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |        Ordilei:        |
-                    |    (11) 98989-2984     |
-                    |                        |
-                    |                        |
-                    |   Escreva a Mensagem   |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-                string mensagem = Console.ReadLine();  
-                Console.WriteLine("Mensagem enviada!"); 
-            }
-            else if (selecaoContato == 2)
-            {
-                Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |     Fernanda SENAI:    |
-                    |    (11) 95869-7845     |
-                    |                        |
-                    |                        |
-                    |   Escreva a Mensagem   |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-                string mensagem = Console.ReadLine();  
-                Console.WriteLine("Mensagem enviada!");
-            }
-            else if (selecaoContato == 3)
-            {
-                Console.WriteLine(@"
-                    __________________________
-                    |                        |
-                    |    Fazendo ligação     |
-                    |________________________|                 
-                    |                        |
-                    |                        |
-                    |        Contato:        |
-                    |                        |
-                    |                        |
-                    |       Sara Gois:       |
-                    |    (11) 94397-3783     |
-                    |                        |
-                    |                        |
-                    |   Escreva a Mensagem   |
-                    |                        |
-                    |                        |
-                    |                        |
-                    |________________________|
-                    
-                    ");
-                string mensagem = Console.ReadLine();  
-                Console.WriteLine("Mensagem enviada!");
-            }
-        }
-
-        static void MostrarDesligando()
-        {
-            Console.WriteLine(@"
                     _________________________
                     |______|        |       |
                     |      |________|       |
@@ -259,6 +98,7 @@ namespace AulaPOOCelular
                     |____|________|_________|
                     
                     ");
+            }
         }
     }
-}
+

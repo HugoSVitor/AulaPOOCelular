@@ -1,3 +1,5 @@
+using System;
+
 namespace AulaPOOCelular
 {
     public class Celular
@@ -21,9 +23,9 @@ namespace AulaPOOCelular
             return ligado;
         }
 
-        public string FazerLigacao()
+        public void FazerLigacao()
         {
-            string contatos = @"
+            Console.WriteLine( @"
             
                     __________________________
                     |                        |
@@ -44,14 +46,86 @@ namespace AulaPOOCelular
                     |   Escolha um contato   |
                     |________________________|
                     
-                ";
-
-            return contatos;
+                ");
+            selecaoContato = int.Parse(Console.ReadLine());
+            if (selecaoContato == 1)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Fazendo ligação     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |        Ordilei:        |
+                    |    (11) 98989-2984     |
+                    |                        |
+                    |                        |
+                    |       Discando...      |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+            }
+            else if (selecaoContato == 2)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Fazendo ligação     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |     Fernanda SENAI:    |
+                    |    (11) 95869-7845     |
+                    |                        |
+                    |                        |
+                    |       Discando...      |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+            }
+            else if (selecaoContato == 3)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Fazendo ligação     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |       Sara Gois:       |
+                    |    (11) 94397-3783     |
+                    |                        |
+                    |                        |
+                    |       Discando...      |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+            }    
+                
         }
 
-        public string EnviarMensagem()
+        public void EnviarMensagem()
         {
-            string mensagemEnviada = @"
+            Console.WriteLine(  @"
             
                     __________________________
                     |                        |
@@ -72,9 +146,88 @@ namespace AulaPOOCelular
                     |   Escolha um contato   |
                     |________________________|
                     
-                ";
+                ");
+            selecaoContato = int.Parse(Console.ReadLine());
+            if (selecaoContato == 1)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Enviar Mensagem     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |        Ordilei:        |
+                    |    (11) 98989-2984     |
+                    |                        |
+                    |                        |
+                    |   Escreva a Mensagem   |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+                string mensagem = Console.ReadLine();  
+                Console.WriteLine("Mensagem enviada!"); 
+            }
+            else if (selecaoContato == 2)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Enviar Mensagem     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |     Fernanda SENAI:    |
+                    |    (11) 95869-7845     |
+                    |                        |
+                    |                        |
+                    |   Escreva a Mensagem   |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+                string mensagem = Console.ReadLine();  
+                Console.WriteLine("Mensagem enviada!");
+            }
+            else if (selecaoContato == 3)
+            {
+                Console.WriteLine(@"
+                    __________________________
+                    |                        |
+                    |    Enviar Mensagem     |
+                    |________________________|                 
+                    |                        |
+                    |                        |
+                    |        Contato:        |
+                    |                        |
+                    |                        |
+                    |       Sara Gois:       |
+                    |    (11) 94397-3783     |
+                    |                        |
+                    |                        |
+                    |   Escreva a Mensagem   |
+                    |                        |
+                    |                        |
+                    |                        |
+                    |________________________|
+                    
+                    ");
+                string mensagem = Console.ReadLine();  
+                Console.WriteLine("Mensagem enviada!");
+            }
 
-            return mensagemEnviada;
+            
         }
     }
 }
